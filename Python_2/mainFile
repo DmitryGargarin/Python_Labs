@@ -79,7 +79,9 @@ def MaleOutput(a):
         0: str()
     }
 
-    if yz >= 10 and yz <= 19:
+    if x == 0 and y == 0 and z == 0:
+        return "ноль"
+    elif yz >= 10 and yz <= 19:
         return hundreds[x] + " " + from10to19[yz]
     else:
         return hundreds[x] + " " + tens[y] + " " + ones[z]
@@ -140,7 +142,10 @@ def FemaleOutput(a):
         0: str()
     }
 
-    if yz >= 10 and yz <= 19:
+
+    if x == 0 and y == 0 and z == 0:
+        return "ноль"
+    elif yz >= 10 and yz <= 19:
         return hundreds[x] + " " + from10to19[yz]
     else:
         return hundreds[x] + " " + tens[y] + " " + ones[z]
@@ -197,7 +202,8 @@ print(FemaleOutput(501))
 print(NumberOutput(19.90))
 print(NumberOutput(181.28))
 print(NumberOutput(345.34))
-
+print(NumberOutput(0.70))
+print(NumberOutput(80.0))
 print("----------------------------------------")
 a = input("\nВведите ширину прямоульника:\t")
 b = input("\nВведите высоту прямоульника:\t")
