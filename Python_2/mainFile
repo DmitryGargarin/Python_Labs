@@ -1,0 +1,210 @@
+def Ruble(a):
+    if (a % 100) % 10 == 1:
+        return "рубль"
+    elif a % 100 >= 10 and a % 100 <= 20:
+        return "рублей"
+    elif a % 10 == 0:
+        return "рублей"
+    elif a % 10 >= 2 and a % 10 <= 4:
+        return "рубля"
+    elif a % 10 >= 5 and a % 10 <= 9:
+        return "рублей"
+
+
+def Penny(a):
+    if a == 1:
+        return "копейка"
+    elif a % 100 >= 10 and a % 100 <= 20:
+        return "копеек"
+    elif a % 10 == 0:
+        return "копеек"
+    elif a % 10 >= 2 and a % 10 <= 4:
+        return "копейки"
+    elif a % 10 >= 5 and a % 10 <= 9:
+        return "копеек"
+
+
+def MaleOutput(a):
+    output = ""
+    x = a // 100
+    y = (a % 100) // 10
+    z = (a % 100) % 10
+    yz = a % 100
+    hundreds = {
+        1: "сто",
+        2: "двести",
+        3: "триста",
+        4: "четыреста",
+        5: "пятьсот",
+        6: "шестьсот",
+        7: "семьсот",
+        8: "восемьсот",
+        9: "девятьсот",
+        0: str()
+    }
+    tens = {
+        1: "десять",
+        2: "двадцать",
+        3: "тридцать",
+        4: "сорок",
+        5: "пятьдесят",
+        6: "шестьдесят",
+        7: "семьдесят",
+        8: "восемьдесят",
+        9: "девяносто",
+        0: str()
+    }
+    from10to19 = {
+        10: "десять",
+        11: "одиннадцать",
+        12: "двенадцать",
+        13: "тринадцать",
+        14: "четырнадцать",
+        15: "пятнадцать",
+        16: "шестнадцать",
+        17: "семнадцать",
+        18: "восемнадцать",
+        19: "девятнадцать",
+    }
+    ones = {
+        1: "один",
+        2: "два",
+        3: "три",
+        4: "четыре",
+        5: "пять",
+        6: "шесть",
+        7: "семь",
+        8: "восемь",
+        9: "девять",
+        0: str()
+    }
+
+    if yz >= 10 and yz <= 19:
+        return hundreds[x] + " " + from10to19[yz]
+    else:
+        return hundreds[x] + " " + tens[y] + " " + ones[z]
+
+
+def FemaleOutput(a):
+    output = ""
+    x = a // 100
+    y = (a % 100) // 10
+    z = (a % 100) % 10
+    yz = a % 100
+    hundreds = {
+        1: "сто",
+        2: "двести",
+        3: "триста",
+        4: "четыреста",
+        5: "пятьсот",
+        6: "шестьсот",
+        7: "семьсот",
+        8: "восемьсот",
+        9: "девятьсот",
+        0: str()
+    }
+    tens = {
+        1: "десять",
+        2: "двадцать",
+        3: "тридцать",
+        4: "сорок",
+        5: "пятьдесят",
+        6: "шестьдесят",
+        7: "семьдесят",
+        8: "восемьдесят",
+        9: "девяносто",
+        0: str()
+    }
+    from10to19 = {
+        10: "десять",
+        11: "одиннадцать",
+        12: "двенадцать",
+        13: "тринадцать",
+        14: "четырнадцать",
+        15: "пятнадцать",
+        16: "шестнадцать",
+        17: "семнадцать",
+        18: "восемнадцать",
+        19: "девятнадцать",
+    }
+    ones = {
+        1: "одна",
+        2: "две",
+        3: "три",
+        4: "четыре",
+        5: "пять",
+        6: "шесть",
+        7: "семь",
+        8: "восемь",
+        9: "девять",
+        0: str()
+    }
+
+    if yz >= 10 and yz <= 19:
+        return hundreds[x] + " " + from10to19[yz]
+    else:
+        return hundreds[x] + " " + tens[y] + " " + ones[z]
+
+
+def NumberOutput(a):
+    return str(MaleOutput(a // 1)) + " " + str(Ruble(a // 1)) + " " + str(
+        FemaleOutput(int(round(a - a // 1, 2) * 100))) + " " + str(Penny(int(round(a - a // 1, 2) * 100)))
+
+
+counter = 0
+b64 = [chr(i) for i in range(65,91)] + [chr(i) for i in range(97,123)] + ['+', '/']
+def Rectangle(a, b, counter, arr):
+    is_found = False
+    if int(a) > int(b):
+        a, b = b, a
+    if int(a) >= 1 and int(b) >= 1:
+
+        print("Квадрат " + str(a) + "x" + str(a) + "\nВсего квадратов сейчас: " + str(counter + 1))
+        print("------------------------------")
+        for i in range(len(arr)):
+            for j in range(len(arr[i])):
+                if arr[i][j] == 0:
+                    row_start = i
+                    col_start = j
+                    is_found = True
+                    break
+            if is_found == True:
+                break
+        for i in range(row_start, row_start + int(a)):
+            for j in range(col_start, col_start + int(a)):
+                arr[i][j] = b64[counter%len(b64)]
+        counter += 1
+        Rectangle(a, int(b) - int(a), counter, arr)
+    else:
+        for i in arr:
+            print(*i, sep=" ", end="\n")
+
+
+print(Ruble(230))
+print(Ruble(838))
+print(Ruble(588))
+print(Penny(814))
+print(Penny(307))
+print(Penny(134))
+
+print(MaleOutput(514))
+print(MaleOutput(78))
+print(MaleOutput(2))
+print(FemaleOutput(2))
+print(FemaleOutput(709))
+print(FemaleOutput(501))
+
+print(NumberOutput(19.90))
+print(NumberOutput(181.28))
+print(NumberOutput(345.34))
+
+print("----------------------------------------")
+a = input("\nВведите ширину прямоульника:\t")
+b = input("\nВведите высоту прямоульника:\t")
+matrix = []
+for i in range(int(b)):
+    matrix.append([])
+    for j in range(int(a)):
+        matrix[i].append(0)
+
+Rectangle(a, b, 0, matrix)
