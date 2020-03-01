@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="797674a9-b9d3-47c1-b2fc-3138af77449d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainFile" beforeDir="false" afterPath="$PROJECT_DIR$/mainFile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +66,8 @@
       <workItem from="1582722279956" duration="460000" />
       <workItem from="1582722833693" duration="33000" />
       <workItem from="1582736313326" duration="627000" />
+      <workItem from="1582784628010" duration="529000" />
+      <workItem from="1582802165867" duration="46000" />
     </task>
     <servers />
   </component>
@@ -86,6 +87,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="261" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1582736782118" />
+    <state x="421" y="86" key="FileChooserDialogImpl" timestamp="1582802187618">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="86" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1582802187618" />
     <state width="1237" height="204" key="GridCell.Tab.0.bottom" timestamp="1582736939864">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -118,10 +123,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1582736939864" />
-    <state x="349" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1582736315934">
+    <state x="349" y="169" key="com.intellij.ide.util.TipDialog" timestamp="1582802167641">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="349" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1582736315934" />
+    <state x="349" y="169" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1582802167641" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PycharmProjects$mainFile.coverage" NAME="mainFile Coverage Results" MODIFIED="1582722715095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
